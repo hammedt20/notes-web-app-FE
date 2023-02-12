@@ -1,0 +1,27 @@
+.notes-page{
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+}
+.note-cards{
+    height: 100%;
+    margin-top: 8rem;
+    display: grid;
+    gap: 1rem;
+}
+.note-button-wrapper{
+    position: fixed;
+    bottom: 0;
+    width: 1024px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem;
+}
+.note-button{
+    float: right;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: #0e121a;
+    color: white;
+    border-radius: 50%;
+}

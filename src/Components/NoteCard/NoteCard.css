@@ -1,0 +1,48 @@
+.note-card{
+    width: 100%;
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    border: 2px solid #0e121a;
+    border-radius: 20px;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+}
+.note-card > h2{
+    position: absolute;
+    /* margin-bottom: 4rem; */
+    /* top: 0; */
+}
+.note-card > p{
+    margin: 2.5rem 0;
+    overflow-y: scroll;
+    padding: 0 0.5rem;
+}
+.note-card-icon{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    width: inherit;
+    align-items: center;
+    left: 0;
+    padding:  1rem;
+    margin-top: 1rem;
+}
+.note-card > p::-webkit-scrollbar {
+    width: 8px;
+}
+.note-card > p::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #f1f1f1;
+}
+.note-card > p::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #888;
+}
+.note-card > p::-webkit-scrollbar-thumb:hover {
+background: #555;
+}

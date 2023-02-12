@@ -1,0 +1,20 @@
+.login-button{
+    width: inherit;
+    background-color: #171c26;
+    border: none;
+    outline: none;
+    height: 48px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}

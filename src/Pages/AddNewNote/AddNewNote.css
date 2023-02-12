@@ -1,0 +1,26 @@
+.add-new-note{
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+}
+.note-form{
+    margin-top: 9em;
+    width: 100%;
+}
+.note-form > input{
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    border:  2px solid #0e121a;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+}
+.note-form > textarea{
+    resize: none;
+    border:  2px solid #0e121a;
+    width: 100%;
+    border-radius: 15px;
+    height: 300px;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
