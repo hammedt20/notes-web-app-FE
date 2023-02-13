@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { BsEyeSlash } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import login_png from '../../assets/img/pablo-sign-in 1.png';
 import { Button } from '../../Components/Button/Button';
 // import Form from '../../Components/Form/Form';
@@ -13,6 +13,7 @@ const title: string = 'signup'
 
 
 export function RegisterPage () {
+    const navigate = useNavigate()
     const [showText, setShowText] = useState<Boolean>(false)
     const [registerDetails, setRegisterDetails] = useState<{
         name: string;
@@ -38,6 +39,11 @@ export function RegisterPage () {
     const handleShowText: React.MouseEventHandler<SVGElement> = () => {
         setShowText(prev => !prev)
     }
+
+    const handleSubmit: React.FormEventHandler<HTMLFormElement>  = (e)=>{
+        e.preventDefault();
+        navigate('/');
+      }
   return (
     <div>
       <div className='login-page'>
@@ -52,7 +58,7 @@ export function RegisterPage () {
                 <h1>Welcome!</h1>
                 <p>Enter details to sign up.</p>
             </div>
-            <form className='form'>
+            <form className='form' onSubmit={handleSubmit}>
                 <input 
                     type = 'text' 
                     name = 'name' 

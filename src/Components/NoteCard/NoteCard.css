@@ -32,6 +32,9 @@
     padding:  1rem;
     margin-top: 1rem;
 }
+.note-card-icon > svg{
+    cursor: pointer;
+}
 .note-card > p::-webkit-scrollbar {
     width: 8px;
 }
@@ -45,4 +48,15 @@
 }
 .note-card > p::-webkit-scrollbar-thumb:hover {
 background: #555;
+}
+
+@media screen and (max-width: 1024px){
+    .note-card{
+        max-width: 50%;
+    }
+}
+@media screen and (max-width: 768px){
+    .note-card{
+        max-width: 100%;
+    }
 }

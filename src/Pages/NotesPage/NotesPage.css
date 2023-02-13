@@ -1,21 +1,33 @@
 .notes-page{
     width: 100%;
     max-width: 1024px;
+    padding: 0 1rem;
     margin: auto;
 }
 .note-cards{
     height: 100%;
     margin-top: 8rem;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
+}
+.note-error{
+    height: calc(100vh - 9rem);
+    margin-top: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888a91;
 }
 .note-button-wrapper{
     position: fixed;
     bottom: 0;
-    width: 1024px;
+    width: 100vw;
+    max-width: 1024px;
     left: 50%;
     transform: translateX(-50%);
     padding: 1rem;
+    z-index: 10;
 }
 .note-button{
     float: right;
@@ -24,4 +36,10 @@
     background-color: #0e121a;
     color: white;
     border-radius: 50%;
+}
+
+@media screen and (max-width: 1024px){
+    .notes-page{
+        max-width: 768px;
+    }
 }

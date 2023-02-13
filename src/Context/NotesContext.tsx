@@ -7,6 +7,7 @@ type NotesContextType ={
     setNewNote: React.Dispatch<React.SetStateAction<newNoteType>>;
     handleTextAreaChange: React.ChangeEventHandler<HTMLTextAreaElement>;
     handleInputChange: React.ChangeEventHandler<HTMLInputElement>;
+    handleRefresh: ()=> void;
 }
 
 type NotesContextProviderProps = {
@@ -41,7 +42,14 @@ export const NotesContextProvider = ({ children }: NotesContextProviderProps) =>
             })
         })
     }
-    return <NotesContext.Provider value = {{ newNote, setNewNote, handleTextAreaChange, handleInputChange }}>{children}</NotesContext.Provider>
+
+    const handleRefresh = () => {
+        setNewNote({
+            noteTitle: '',
+            noteDescription: ''
+        })
+    }
+    return <NotesContext.Provider value = {{ newNote, setNewNote, handleTextAreaChange, handleInputChange, handleRefresh }}>{children}</NotesContext.Provider>
 }
 
  

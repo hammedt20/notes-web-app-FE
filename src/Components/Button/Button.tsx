@@ -7,11 +7,11 @@ import './Button.css'
 
 export function Button ({ title }: { title: string}) {
   return (
-      // <button className='login-button'>
-      //   {title}
-      // </button>
-    <Link to = {'/'} className='login-button'>
-      {title}
-    </Link>
+      <button className='login-button' type='submit'>
+        {title}
+      </button>
+    // <Link to = {'/'} className='login-button'>
+    //   {title}
+    // </Link>
   );
 }

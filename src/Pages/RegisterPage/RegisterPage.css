@@ -24,6 +24,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 0 1rem;
     row-gap: 60px;
 }
 .form-section-details{
@@ -92,4 +93,13 @@
 }
 .sign-up-link{
     color: #0e121a;
+}
+
+@media screen and (max-width: 900px){
+    .login-page .png-section{
+        display: none;
+    }
+    .login-page .form-section{
+        flex-basis: 100%;
+    }
 }

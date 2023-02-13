@@ -4,13 +4,14 @@ import login_png from '../../assets/img/pablo-sign-in 1.png';
 import { useState } from 'react';
 import { BsEyeSlash } from 'react-icons/bs';
 import { Button } from '../../Components/Button/Button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const title: string = 'login'
 
 
 export default function LoginPage () {
+  const navigate = useNavigate()
   const [showText, setShowText] = useState<Boolean>(false);
   const [loginDetails, setLoginDetails] = useState<{
     email: string;
@@ -36,6 +37,11 @@ export default function LoginPage () {
   const handleShowText: React.MouseEventHandler<SVGElement> = () => {
     setShowText(prev => !prev)
   }
+
+  const handleSubmit: React.FormEventHandler<HTMLFormElement>  = (e)=>{
+    e.preventDefault();
+    navigate('/');
+  }
   return (
     <div className='login-page'>
       <div className='png-section'>
@@ -49,7 +55,7 @@ export default function LoginPage () {
             <h1>Welcome!</h1>
             <p>Enter details to login.</p>
         </div>
-        <form className='form'>
+        <form className='form' onSubmit={handleSubmit}>
           <input 
             type = 'email' 
             name = 'email' 
